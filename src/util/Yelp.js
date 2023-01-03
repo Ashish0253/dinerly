@@ -41,4 +41,4 @@ const Yelp = {
   },
 };
 
-module.exports = Yelp;
+export default Yelp;

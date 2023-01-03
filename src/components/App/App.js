@@ -2,7 +2,7 @@ import React from "react";
 import BusinessList from "../BusinessList/BusinessList";
 import SearchBar from "../SearchBar/SearchBar";
 import "./App.css";
-const Yelp = require("../../util/Yelp");
+const Yelp = require("../../util/Yelp").default;
 
 class App extends React.Component {
   constructor(props) {

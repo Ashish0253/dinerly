@@ -1,27 +1,27 @@
-import React from 'react';
-import BusinessList  from '../BusinessList/BusinessList';
-import SearchBar  from '../SearchBar/SearchBar';
-import './App.css';
-const Yelp = require('../../util/Yelp');
+import React from "react";
+import BusinessList from "../BusinessList/BusinessList";
+import SearchBar from "../SearchBar/SearchBar";
+import "./App.css";
+const Yelp = require("../../util/Yelp");
 
 class App extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state ={
-      returnedBusinesses: []
+    this.state = {
+      returnedBusinesses: [],
     };
 
     this.searchYelp = this.searchYelp.bind(this);
   }
 
   searchYelp(term, location, sortBy) {
-    let temp =[];
-    Yelp.search(term, location, sortBy).then(businesses => {
+    let temp = [];
+    Yelp.search(term, location, sortBy).then((businesses) => {
       temp = businesses;
       console.log(temp);
       this.setState({
-        returnedBusinesses: temp
+        returnedBusinesses: temp,
       });
       console.log(this.state.returnedBusinesses);
     });
@@ -36,15 +36,14 @@ class App extends React.Component {
     //   console.log('chal rha h');
     //   console.log(this.state.returnedBusinesses);
     // });
-
   }
-  
-  render() {  
+
+  render() {
     return (
-      <div className='App'>
-        <h1>Dinerly</h1>
-          <SearchBar searchYelp={this.searchYelp}/>
-          <BusinessList businesses={this.state.returnedBusinesses}/> 
+      <div className="App">
+        <h1>Dinerley</h1>
+        {/* <SearchBar searchYelp={this.searchYelp} />
+        <BusinessList businesses={this.state.returnedBusinesses} /> */}
       </div>
     );
   }

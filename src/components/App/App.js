@@ -42,8 +42,8 @@ class App extends React.Component {
     return (
       <div className="App">
         <h1>Dinerley</h1>
-        {/* <SearchBar searchYelp={this.searchYelp} />
-        <BusinessList businesses={this.state.returnedBusinesses} /> */}
+        <SearchBar searchYelp={this.searchYelp} />
+        <BusinessList businesses={this.state.returnedBusinesses} />
       </div>
     );
   }
